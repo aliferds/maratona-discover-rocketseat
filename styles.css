@@ -43,17 +43,6 @@ header {
     background: var(--dark-green);
     padding: 2rem 2rem 6rem 2rem;
     text-align: center;
-    font-weight: 400;
-    font-style: italic;
-}
-
-header h1::first-letter {
-    color: var(--gold);
-}
-header h1 {
-    float:center;
-    unicode-bidi:bidi-override;
-    direction: rtl;
 }
 
 /* CONTENT =========================== */
@@ -82,8 +71,7 @@ header h1 {
     padding: 1.5rem 2rem;
     border-radius: .25rem;
 
-    margin-bottom: 2rem;
-    width: min(80vw, 800px);
+    margin: 2rem;
     color: var(--dark-blue);
 }
 
