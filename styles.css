@@ -3,12 +3,12 @@
 :root {
     --dark-blue: rgba(54, 63, 95, 1);
     --gold: rgba(250, 250, 00, 1);
-    --dark-green: rgba(46,74,34,1);
-    --green:  hsl(147, 80%, 36%);
-    --lighter-green: rgba(74, 170, 39,1);
-    --lightest-green: rgba(74, 250, 39,1);
+    --dark-green: rgba(0, 97, 57, .7);
+    --green: rgba(18, 160, 80, 1);
+    --light-green: rgba(61, 215, 5, 1);
     --red: hsl(0, 81%, 54%);
     --background: hsl(216, 20%, 95%);
+    --dark-glass: rgba(0,0,0,.7);
 }
 * {
     padding: 0;
@@ -61,8 +61,6 @@ header {
 }
 .container section {
     margin-bottom: max(5vh, 30px);
-    display:
-    flex-direction: row;
 }
 
 .sr-only {
@@ -104,7 +102,7 @@ header {
 }
 
 .card.total {
-    background: var(--lighter-green);
+    background: var(--green);
     color: white;
 }
 #transactions{
@@ -156,9 +154,70 @@ td.income {
 td.expense {
     color: var(--red);
 }
+/* MODAL ============================== */
+.modal-overlay {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: var(--dark-glass);
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+}
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+.modal {
+    font-size: 1rem;
+    width: min(90%, 500px);
+    max-width: 500px;
+    background-color: var(--background);
+    padding: 2.4rem;
+    position: relative;
+}
+#form {
+    max-width: 500px;
+}
+
+#form h2 {
+    margin-top: 0;
+}
+.modal small.help {
+    font-size: 0.8rem;
+    opacity: 0.4;
+    text-align: center;
+}
+.modal input{
+    width: 100%;
+    border: none;
+    border-radius: .4rem;
+    height: 1.8rem;
+    font-size: 1.2rem;
+    padding: 1.2rem;
+    margin-bottom: -6px;
+}
+.modal .input-group{
+    width: 100%;
+    height: 3rem;
+    font-size: 1rem;
+    margin-top: .8rem;
+}
+div.input-group.actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 /* LINKS E BOTOES ==================== */
 a {
+    box-sizing: border-box;
     font-size: 1.5rem;
     font-weight: 400;
     padding: 2px;
@@ -170,14 +229,41 @@ a img {
 .button.new {
     position: relative;
     color: var(--green);
-    transition: all .5s;
+    transition: all .3s;
     display: inline-block;
     margin-bottom: .8rem;
 }
 .button.new:hover {
+    opacity: .4;
+}
+a.cancel {
+    text-align: center;
+    width: 100%;
+    font-size: 1.4rem;
+    margin-right: 1rem;
+    padding: 5px;
+    height: 3rem;
+    color: var(--red);
+    transition: all .3s;
+    border: 2px solid var(--red);
+    border-radius: 0.25rem;
+}
+a.cancel:hover {
     color: white;
-    border-radius: 5px;
-    background: var(--lightest-green);
+    background-color: var(--red);
+}
+.modal button {
+    border: none;
+    border-radius: .25rem;
+    width: 100%;
+    color: white;
+    font-size: 1.4rem;
+    background: var(--green);
+    height: 3rem;
+    transition: all .3s;
+}
+.modal button:hover {
+    opacity: .7;
 }
 
 /* FOOTER ============================ */
@@ -208,6 +294,12 @@ footer {
         #data-table tr, #data-table td, #data-table th{
             display: flex;
             flex-wrap: wrap;
+        }
+        .card, #data-table {
+            display: flex;
+            flex-wrap: wrap;
+            word-wrap: break-word;
+            word-break: break-all;
         }
         #data-table tbody{
             gap: 5rem;
