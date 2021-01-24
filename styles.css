@@ -6,6 +6,7 @@
     --dark-green: rgba(46,74,34,1);
     --green:  hsl(147, 80%, 36%);
     --lighter-green: rgba(74, 170, 39,1);
+    --lightest-green: rgba(74, 250, 39,1);
     --red: hsl(0, 81%, 54%);
     --background: hsl(216, 20%, 95%);
 }
@@ -15,6 +16,9 @@
     box-sizing: border-box;
     font: 1.2em "Bodoni Moda", serif;
 }
+html {
+    font-size: 93.75%;
+}
 
 body {
     width: 100vw;
@@ -22,7 +26,7 @@ body {
     background: var(--background);
 }
     /* TEXTOS ============================*/
-h2::first-letter, h3::first-letter, p::first-letter, th::first-letter, td::first-letter {
+h2::first-letter, h3::first-letter, p::first-letter, th::first-letter, td::first-letter, h3 span::first-letter {
     text-transform: uppercase;
 }
 
@@ -57,10 +61,21 @@ header {
 }
 .container section {
     margin-bottom: max(5vh, 30px);
+    display:
+    flex-direction: row;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    white-space: nowrap;
 }
     /* BALANCE ======================= */
 #balance {
     margin-top: -5rem;
+    width: min(90vw, 800px);
 }
 #balance-title{
     text-align: left;
@@ -70,17 +85,21 @@ header {
     font-size: 1rem;
     padding: 1.5rem 2rem;
     border-radius: .25rem;
-
-    margin: 2rem;
+    margin: 1rem;
     color: var(--dark-blue);
 }
 
 .card h3 {
     font-weight: 500;
+    font-size: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .card p {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 3rem;
 }
 
@@ -88,8 +107,11 @@ header {
     background: var(--lighter-green);
     color: white;
 }
-#data-table {
+#transactions{
     width: min(90vw, 800px);
+}
+#data-table {
+    width: 100%;
     font-size: .6rem;
     border-spacing: 0 .5rem;
     text-align: center;
@@ -118,6 +140,10 @@ header {
 #data-table tbody td:first-child {
     border-radius: 0.5rem 0 0 0.5rem;
 }
+#data-table thead th:last-child, 
+#data-table tbody td:last-child {
+    border-radius: 0 0.5rem 0.5rem 0;
+}
 
 td.description {
     color: var(--dark-blue);
@@ -131,6 +157,29 @@ td.expense {
     color: var(--red);
 }
 
+/* LINKS E BOTOES ==================== */
+a {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 2px;
+    text-decoration: none;
+}
+a img {
+    width: 1.4rem;
+}
+.button.new {
+    position: relative;
+    color: var(--green);
+    transition: all .5s;
+    display: inline-block;
+    margin-bottom: .8rem;
+}
+.button.new:hover {
+    color: white;
+    border-radius: 5px;
+    background: var(--lightest-green);
+}
+
 /* FOOTER ============================ */
 footer {
     text-align: center;
@@ -138,4 +187,30 @@ footer {
     color: var(--dark-blue);
 
     opacity: .6;
+}
+
+/* RESPONSIVE ========================= */
+@media (min-width: 800px){
+    html {
+        font-size: 87.5%; /* 14px */
+    }
+    #balance {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+}
+@media (max-width: 800px){
+    #data-table td, #data-table th{
+        padding: 0.3rem 0.6rem;
+    }
+    @media (max-width: 400px){
+        #data-table tr, #data-table td, #data-table th{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #data-table tbody{
+            gap: 5rem;
+        }
+    }
 }
