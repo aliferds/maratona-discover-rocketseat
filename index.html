@@ -23,7 +23,7 @@
                     <span>entradas</span>
                     <img src="./assets/income.svg" alt="imagem de entradas">
                 </h3>
-                <p>R$ 5.000,00</p>
+                <p id="incomeDisplay">R$ 0,00</p>
             </div>
 
             <div class="card">
@@ -31,7 +31,7 @@
                     <span>saidas</span>
                     <img src="./assets/expense.svg" alt="imagem de saidas">
                 </h3>
-                <p>R$ 5.000,00</p>
+                <p id="expenseDisplay">R$ 0,00</p>
             </div>
 
             <div class="card total">
@@ -39,7 +39,7 @@
                     <span>total</span>
                     <img src="./assets/total.svg" alt="imagem de total">
                 </h3>
-                <p>R$ 5.000,00</p>
+                <p id="totalDisplay">R$ 0,00</p>
             </div>
         </section>
             
@@ -59,9 +59,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <!-- <tr>
                         <td class="description">luz</td>
-                        <td class="expense">R$ 500,00</td>
+                        <td class="expense">R$ 0,00</td>
                         <td class="date">23/01/2021</td>
                         <td class="">
                             <a href="#">
@@ -71,7 +71,7 @@
                     </tr>
                     <tr>
                         <td class="description">criação website</td>
-                        <td class="income">R$ 5.000,00</td>
+                        <td class="income">R$ 0,00</td>
                         <td class="date">23/01/2021</td>
                         <td class="">
                             <a href="">
@@ -88,7 +88,7 @@
                                 <img src="./assets/minus.svg" alt="remover Transação" >
                             </a>
                         </td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </section>
@@ -97,7 +97,7 @@
     <div class="modal-overlay">
         <div class="modal">
               <div class="form">
-                  <form id="form" action="">
+                  <form id="form" action="" onsubmit="Form.submit(event)">
                         <h2>Nova Transação</h2>
                         <div class="input-group">
                             <label class="sr-only" for="description">Descrição</label>

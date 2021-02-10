@@ -110,11 +110,11 @@ header {
 }
 #data-table {
     width: 100%;
-    font-size: .6rem;
     border-spacing: 0 .5rem;
     text-align: center;
 }
 #data-table tr {
+    font-size: .8rem;
     background: white;
     opacity: .7;
     border: 2px solid transparent;
