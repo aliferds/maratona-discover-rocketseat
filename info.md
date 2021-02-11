@@ -1,4 +1,3 @@
-```markdown
 # Maratona Discover
 
 ## O que vamos ver?
@@ -52,6 +51,7 @@
 ## Investimento de tempo (Hard Skills)
 
 ### Inglês Instrumental
+
     - Investimento de tempo constante
     - Glossário
 
@@ -61,6 +61,7 @@
     - Se estiver no seu orçamento
 
 ### Entender os fundamentos da programação: 20h
+
     - Visão geral da área
     - A ciência por trás da computação
     - Como funciona o computador
@@ -79,18 +80,18 @@
 * Entenda os fundamentos (Discover)
 * 20% estudando 80% praticando
 * Como praticar?
-    * Micro atividades
-        1. Escolha algum site que você gosta bastante
-        2. Tente replicar somente 1 compomente por vez
-        3. Crie 3 variações daquele componente
-        4. Repita...
-        - Exemplo de componentes
-            - Navbar, Buttons, Forms, Headers, Footers, Articles, Cards, Modals ...
+  * Micro atividades
+    1. Escolha algum site que você gosta bastante
+    2. Tente replicar somente 1 compomente por vez
+    3. Crie 3 variações daquele componente
+    4. Repita...
+      - Exemplo de componentes
+      - Navbar, Buttons, Forms, Headers, Footers, Articles, Cards, Modals ...
     * Macro atividades
         1. Crie de 5 a 10 mini sites (one page, multi-page)
         2. Transformar layouts do Figma, Dribble, Behance
 
-> Não pense, code! 
+> Não pense, code!
     - Informação é o alimento, você come o necessário para performar melhor
     - Cuidado com a obesidade informacional.
     - Aja mais! Code mais!
@@ -100,12 +101,13 @@
 > Ligue suas antenas para o Design!
 
 * Onde conseguir mais conteúdo?
-    - Documentação MDN
-    - CSS Tricks
-    - Codepen
-    - Google, Youtube
+  - Documentação MDN
+  - CSS Tricks
+  - Codepen
+  - Google, Youtube
 
 #### Adicionais ao HTML e CSS
+
     - Acessibilidade
     - SEO
     - Responsividade
@@ -120,8 +122,8 @@
 * Você saberá que está no ponto assim que conseguir criar componentes e páginas em poucos minutos / horas
 * Diferença entre não saber o que pesquisar e saber o que pesquisar
 * Lembre do momento platô
-    - grandes resultados no início
-    - sensação de poucos resultados por um tempo (platô)
+  - grandes resultados no início
+  - sensação de poucos resultados por um tempo (platô)
 * PROVAVELMENTE, você não terá dominado tudo de CSS e HTML após esse tempo...
 
 ### Git, Github, Linha de comando: 10h
@@ -137,27 +139,27 @@ Buscar familiaridade com o terminal
     - Ele mostrará seu progresso e sua constância
 
 ### JavaScript: 400h
-    
+
 > Você não precisa estudar outra linguagem
 
 * O que aprender?
-    - Fundamentos
-        - Estrutura de dados
-        - Variáveis
-        - Objetos
-        - Funções
-        - Tipos de Dados
-    - Interação com HMTL (DOM)
-    - Formulários
-    - Validações
-    - Eventos
-    - Animações
-    - APIs
-    - Lógica
-    - Games
+  - Fundamentos
+    - Estrutura de dados
+    - Variáveis
+    - Objetos
+    - Funções
+    - Tipos de Dados
+  - Interação com HMTL (DOM)
+  - Formulários
+  - Validações
+  - Eventos
+  - Animações
+  - APIs
+  - Lógica
+  - Games
 
 * O que construir/fazer?
-    * Micro atividades
+  * Micro atividades
         - Components
             - Sliders
             - Galeria de imagens
@@ -170,11 +172,11 @@ Buscar familiaridade com o terminal
             - Codewars
             - freecodecamp
             - front-end mentor
-						- https://www.uplabs.com/
-						- https://www.hackerrank.com/
-						- https://www.devchallenge.com.br/
+              - <https://www.uplabs.com/>
+              - <https://www.hackerrank.com/>
+              - <https://www.devchallenge.com.br/>
     * Macro atividades
-        - Jogos (replique jogos básico como jogo da velha por exemplo)
+      - Jogos (replique jogos básico como jogo da velha por exemplo)
         - Aplicações (por temas)
             - Financeiras
             - Relacionamentos
@@ -183,17 +185,18 @@ Buscar familiaridade com o terminal
             - Música
 
 * Onde conseguir conteúdo?
-    * Discover
-        - Aprenda algo novo e aplique
-        - Pense em diferentes maneiras para modificar/aplicar
-    * Livros?
-        - Eloquent Javascript
-        - You don't know Javascript
-    * Documentação (MDN)
-    * Blogs, Youtube ...
-    * Google, Stackoverflow
+  * Discover
+    - Aprenda algo novo e aplique
+    - Pense em diferentes maneiras para modificar/aplicar
+  * Livros?
+    - Eloquent Javascript
+    - You don't know Javascript
+  * Documentação (MDN)
+  * Blogs, Youtube ...
+  * Google, Stackoverflow
 
 #### Avançando no JS
+
 - AJAX
 - Promises
 - Async/Await
@@ -267,9 +270,6 @@ Comece a introduzir algumas ferramentas mais avançadas
 * Direção é tão importante quando o esforço aplicado
 * Se estiver complexo, volte alguns passos, pois o aprendizado não é gráfico linear
 
-```
-
-```markdown
 ## Quanto tempo você investiu até aqui?
 
 ~700h
@@ -278,10 +278,10 @@ Comece a introduzir algumas ferramentas mais avançadas
 
 _Hora por dia x Dias da semana x Semanas do mês x Meses_
 
-Exemplo: 
-	Vou dedicar 1h e meia por dia, 
+Exemplo:
+	Vou dedicar 1h e meia por dia,
 	de segunda a sexta,
-	todas as semanas do mês durante 24 meses (2 anos), 
+	todas as semanas do mês durante 24 meses (2 anos),
 	quantas horas terei investido?
 1h30(h) * 5 (dias) * 4 (semanas no mês) * 24 (meses) = 720hrs de estudo
 
@@ -320,6 +320,7 @@ Você só precisa o veículo ideal para essa jornada!
         - ...
 
 ## Soft Skills
+
 - Não deixe pra depois! (comprometimento)
 - Code todos os dias! (constância)
 - Seja sua melhor versão (aperfeiçoamento)
@@ -328,7 +329,7 @@ Você só precisa o veículo ideal para essa jornada!
 (networking)
 - Não faça pelo dinheiro (propósito)
 - Entenda seu momento, seu contexto e seus objetivos (visão clara)
-- Saúde 
+- Saúde
     - Durma bem
     - Se alimente bem
     - Faça exercícios físicos
@@ -341,13 +342,12 @@ Pratique a gratidão!
 
 # NEVER STOP LEARNING
 
-- Foco! 
+- Foco!
 - Comunidade
-    - Fazer tudo isso sem ajuda é muito mais desafiador.
-    - Compartilhe suas vitórias, mas também seus desafios
+  - Fazer tudo isso sem ajuda é muito mais desafiador.
+  - Compartilhe suas vitórias, mas também seus desafios
 - Seja uma pessoa blindada!
-    - Não dê ouvidos a qualquer opinião
-    - Não entre em discussões que não levam a nada
-    - Permita ficar ao seu redor, pessoas que te coloquem no próximo nível. 
+  - Não dê ouvidos a qualquer opinião
+  - Não entre em discussões que não levam a nada
+  - Permita ficar ao seu redor, pessoas que te coloquem no próximo nível.
 - Faça mais! Pratique mais! Foque no seu objetivo e no seu resultado!
-```
