@@ -154,16 +154,30 @@ const Form = {
             // console.log(transaction)
             Transaction.add(transaction)
 
-            Form.clearFields()
-            Modal.close()
+            
         } catch (error) {
             alert(error.message)
         }
         Form.formatData()
     },
+    close(){
+        Form.description.classList.remove('input-empty');
+        Form.amount.classList.remove('input-empty');
+        Form.date.classList.remove('input-empty');
+        Form.clearFields()
+        Modal.close()
+    },
     validateField() {
         const {description, amount, date} = Form.getValues()
-
+        if( description.trim() === "") {
+            Form.description.classList.add('input-empty');
+        }
+        if( amount.trim() === "") {
+            Form.amount.classList.add('input-empty');
+        }
+        if( date.trim() === "") {
+            Form.date.classList.add('input-empty');
+        }
         if( description.trim() === "" ||
             amount.trim() === "" ||
             date.trim() === "" ) {
@@ -196,6 +210,14 @@ const App = {
         DOM.updateBalance()
 
         Storage.set(Transaction.all)
+
+        if(Transaction.total() >= 0){
+            document.querySelector(".card.total").classList.remove('negative');
+            document.querySelector(".card.total").classList.add('positive');
+        } else if(Transaction.total() < 0){
+            document.querySelector(".card.total").classList.remove('positive');
+            document.querySelector(".card.total").classList.add('negative');
+        }
     },
     reload() {
         DOM.clearTransaction()

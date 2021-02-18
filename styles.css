@@ -98,8 +98,13 @@ header {
 }
 
 .card.total {
-    background: var(--green);
     color: white;
+}
+.positive {
+    background: var(--green);
+}
+.negative {
+    background: var(--red);
 }
 
 /* Table ===================== */
@@ -229,6 +234,9 @@ input {
     width: 48%;
 }
 
+.input-empty {
+    border: 1px solid var(--red);
+}
 
 /* LINKS E BOTOES ==================== */
 a {
