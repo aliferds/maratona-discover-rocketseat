@@ -144,6 +144,9 @@ const Form = {
         Form.description.value = ""
         Form.amount.value = ""
         Form.date.value = ""
+        Form.description.classList.remove('input-empty')
+        Form.date.classList.remove('input-empty')
+        Form.amount.classList.remove('input-empty')
     },
 
     submit(event){
@@ -152,6 +155,7 @@ const Form = {
             Form.validateField()
             const transaction = Form.formatData()
             // console.log(transaction)
+
             Transaction.add(transaction)
 
             Form.close()
@@ -161,9 +165,6 @@ const Form = {
         Form.formatData()
     },
     close(){
-        Form.description.classList.remove('input-empty')
-        Form.amount.classList.remove('input-empty')
-        Form.date.classList.remove('input-empty')
         Form.clearFields()
         Modal.close()
     },
