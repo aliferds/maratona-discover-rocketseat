@@ -154,12 +154,11 @@ const Form = {
             // console.log(transaction)
             Transaction.add(transaction)
 
-            
+            Form.close()
         } catch (error) {
             alert(error.message)
         }
         Form.formatData()
-        Form.close()
     },
     close(){
         Form.description.classList.remove('input-empty')
