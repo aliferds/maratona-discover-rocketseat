@@ -159,11 +159,12 @@ const Form = {
             alert(error.message)
         }
         Form.formatData()
+        Form.close()
     },
     close(){
-        Form.description.classList.remove('input-empty');
-        Form.amount.classList.remove('input-empty');
-        Form.date.classList.remove('input-empty');
+        Form.description.classList.remove('input-empty')
+        Form.amount.classList.remove('input-empty')
+        Form.date.classList.remove('input-empty')
         Form.clearFields()
         Modal.close()
     },
