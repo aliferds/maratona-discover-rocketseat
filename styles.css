@@ -7,6 +7,7 @@
     --light-green: rgb(61, 215, 5);
     --income: rgb(18, 164, 84);
     --red: rgb(233, 41, 41);
+    --dark-red: rgb(180, 41, 41);
     --modal: rgba(0,0,0,.7);
 }
 * {
@@ -21,6 +22,7 @@ html {
 body {
     font-family:'Poppins', sans-serif;
     background: white;
+    min-height: 100vh;
 }
     /* TEXTOS ============================*/
 
@@ -46,6 +48,8 @@ header {
 
 .container {
     width: min(90vw, 800px);
+    height: 100%;
+    min-height: 360px;
     margin: auto;
 }
 
@@ -77,9 +81,10 @@ header {
     background: white;
     font-size: 1rem;
     padding: 1.5rem 2rem;
-    border-radius: .25rem;
+    border-radius: 0.5rem;
     margin: 1rem;
     color: var(--dark-blue);
+    border: 2px solid black;
 }
 
 .card h3 {
@@ -97,14 +102,22 @@ header {
     line-height: 3rem;
 }
 
-.card.total {
-    color: white;
-}
+
 .positive {
+    color: white;
     background: var(--green);
 }
 .negative {
+    color: white;
     background: var(--red);
+}
+
+.border-green {
+    border: 2px solid var(--dark-green);
+}
+
+.border-red {
+    border: 2px solid var(--dark-red);
 }
 
 /* Table ===================== */
@@ -118,6 +131,8 @@ header {
     border-spacing: 0 0.5rem;
     color: #969cb3;
 }
+
+
 table thead tr th:first-child, 
 table tbody tr td:first-child
 {
@@ -161,6 +176,28 @@ td.income {
 
 td.expense {
     color: var(--red);
+}
+
+@media (max-width: 768px) {
+    tr {
+        display: grid;
+        grid-template-areas: 
+        "description description description"
+        " value date del";
+        place-items: center;
+    }
+    .description {
+        grid-area: description;
+    }
+    .value {
+        grid-area: value;
+    }
+    .date {
+        grid-area: date;
+    }
+    .del {
+        grid-area: del;
+    }
 }
 
 /* Modal ===================== */
@@ -313,6 +350,10 @@ footer p{
     z-index: 20;
 }
 
+footer p::first-letter {
+    text-transform: none;
+}
+
 /* RESPONSIVE ========================= */
 @media (min-width: 800px){
     html {
@@ -324,24 +365,17 @@ footer p{
         gap: 2rem;
     }
 }
-/* @media (max-width: 800px){
-    #data-table td, #data-table th{
-        padding: 0.3rem 0.6rem;
-    }
-    @media (max-width: 400px){
-        #data-table tr, #data-table td, #data-table th{
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .card, #data-table {
-            display: flex;
-            flex-wrap: wrap;
-            word-wrap: break-word;
-            word-break: break-all;
-        }
-        #data-table tbody{
-            gap: 5rem;
-        }
-    }
-} */
 
+/* ============================ UTILS =========================== */
+
+.bg-green {
+    background-color: var(--dark-green);
+}
+
+.text-l-green {
+    color: var(--light-green);
+}
+
+.text-white {
+    color: white;
+}

@@ -67,7 +67,7 @@ const DOM = {
         DOM.transactionsContainer.appendChild(tr)
     },
     innerHTMLTransaction(transaction, index) {
-        const CSSclass = transaction.amount > 0 ? "income" : "expense"
+        const CSSclass = transaction.amount > 0 ? "income value" : "expense value"
 
         const amount = Utils.formatCurrency(transaction.amount)
 
@@ -75,7 +75,7 @@ const DOM = {
             <td class="description">${transaction.description}</td>
             <td class=${CSSclass}>${amount}</td>
             <td class="date">${transaction.date}</td>
-            <td>
+            <td class="del">
                 <a href="#">
                     <img onclick="Transaction.remove(${index})" src="./assets/minus.svg" alt="remover Transação" >
                 </a>
@@ -212,12 +212,18 @@ const App = {
 
         Storage.set(Transaction.all)
 
-        if(Transaction.total() >= 0){
+        if(Transaction.total() > 0){
             document.querySelector(".card.total").classList.remove('negative');
+            document.querySelector(".card.total").classList.remove('border-red');
             document.querySelector(".card.total").classList.add('positive');
+            document.querySelector(".card.total").classList.add('border-green');
         } else if(Transaction.total() < 0){
             document.querySelector(".card.total").classList.remove('positive');
+            document.querySelector(".card.total").classList.remove('border-green');
             document.querySelector(".card.total").classList.add('negative');
+            document.querySelector(".card.total").classList.add('border-red');
+        } else {
+
         }
     },
     reload() {
